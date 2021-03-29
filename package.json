@@ -5,7 +5,10 @@
   "author": "Gabriel Demamann <gabrieldemamann@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon src/server.js"
+    "dev": "nodemon src/server.js",
+    "prebuild": "rimraf dist",
+    "build": "sucrase ./src -d ./dist --transforms imports",
+    "start": "node dist/server.js"
   },
   "dependencies": {
     "dotenv": "^8.2.0",
