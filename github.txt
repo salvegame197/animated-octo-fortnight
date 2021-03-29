@@ -1,0 +1,83 @@
+git init
+  inicia um git
+
+git config user.name "name"
+git config user.email "email"
+  configurações do git ao iniciar o projeto
+
+git status
+  verifica o status do seu git arquivos para serem rastreados/modificados/criados
+
+git add arquivo/.
+  adiciona um arquivo para ser acompanhado, o ponto coloca todos os arquivos
+
+git log (--oneline -numero(1,2,3...0))
+  verifica todos os commits e suas mensagens  é possivel adicionar parametros como o oneline ou um numero para mostrar menos commits
+
+git commit -m "Mensagem"
+  faz um snapshot do seu projeto atual, deve enviar uma mensagem sugestivo com oque foi feito,
+   enviar pequenos commits para se achar depois
+
+git branch
+  verifica os branchs do projeto(#1)
+
+git branch nomedoBranch
+  cria um branch(#1), criar com nome sugestivo sempre
+
+git checkout nomedoBranch
+  alterar a sua ramificação para a branch que você quer
+
+git branch -d/-D nomedoBranch(#2)
+  serve para deletar um branch
+
+git merge nomedoBranch
+  Junta o branch que você esta atualmente com o que você indicar
+
+git checkout -b nomedoBranch
+  cria um branch se ele não existe e o acessa
+
+git clone local do git . (#4)
+  clona um git para onde você esta no terminal
+
+git push
+  envia seus commits para o bare-repository
+
+git fetch (#6)
+  baixa os arquivos sem realizar merge
+
+git rebase
+  realiza o "merge" dos commits entre projetos após um git fetch
+
+git pull
+  faz o fetch e o rebase ao mesmo tempo
+
+git init --bare (#7)
+  cria um repositorio bare para que seja possivel enviar um git push
+
+git tag 'versão(v1.0)'(#8)
+  cria uma versão do projeto como se fosse a estavel
+
+git tag
+  verifica todas as tags(versoes) do projeto
+
+git push origin {tag}
+  envia para o repositorio original uma tag(versão) do projeto
+
+git checkout {tag}
+  troca o repositorio para o da tag selecionada, apenas leitura não é possivel commitar ou alterar
+
+git remote add origin your_repo.git
+
+#1 Um branch nada mais é do que uma ramificação do projeto.
+#2 o -d vai dar erro caso não tenha feito merge com o ramo principal, o -D vai passar por cima
+#3 rebase, faz quase a mesma coisa que o merge
+#4 clone, o ponto no final é para fazer o clone no local do terminar que você esta.
+#5 push enviar o seus commits para o repositorio original, desde que seja um repositorio "bare"
+#6 fetch deve ser usado após o clone
+#7 como se fosse um servidor, centralizador de arquivos
+#8 tag, exemplo git tag v1.0, vai criar a versão 1.0
+#9 push origin, exemplo git push origin v1.0
+
+
+
+
