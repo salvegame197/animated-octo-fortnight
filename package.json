@@ -11,9 +11,14 @@
     "start": "node dist/server.js"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "date-fns": "^2.19.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "mongoose": "^5.12.2"
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.2",
+    "nodemailer": "^6.5.0",
+    "nodemailer-express-handlebars": "^4.0.0"
   },
   "devDependencies": {
     "eslint": "^7.23.0",

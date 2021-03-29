@@ -5,19 +5,18 @@
 npm install --global yarn
 yarn install
 
-## tecnologias já implementadas
+## tecnologias ainda a implementar ou já implementadas
 
-> yarn
-> node
-> sucrase
-> nodemon
-> type module from sucrase
-
-## tecnologias ainda a implementar
-
+> yarn ok
+> node ok
+> sucrase ok
+> nodemon ok
+> type module from sucrase ok
 > winston
-> nodemailer
-> babel
+> nodemailer ok
+> nodemailer handlebars(gerar a view do email) ok
+> babel ?
+> bcrypt{senhas} ok
 
 ## aprender para usar
 
@@ -26,3 +25,4 @@ yarn install
 ## Sites que ajudam
 
 > mailtrap.io
+> https://codedmails.com/
