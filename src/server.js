@@ -1,4 +1,6 @@
 import app from './app';
 
-const port = 3001;
-app.listen(port);
+const port = process.env.API_PORT;
+app.listen(port, () => {
+  console.info(`listen on port ${port}`);
+});

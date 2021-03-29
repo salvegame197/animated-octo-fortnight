@@ -1,12 +1,17 @@
 #Tecnologias
 
+## install
+
+npm install --global yarn
+yarn install
+
 ## tecnologias já implementadas
 
 > yarn
 > node
 > sucrase
 > nodemon
-> type module > module
+> type module from sucrase
 
 ## tecnologias ainda a implementar
 

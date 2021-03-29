@@ -1,3 +1,4 @@
+import _ from './config/dotenv';
 import express from 'express';
 import homeRoutes from './routes/home';
 
