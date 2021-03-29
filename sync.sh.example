@@ -1,0 +1,11 @@
+ echo "Conecting to SSH... "
+ ssh <IP_SSH_SERVER> \ 'cd <paste project> && git clean -d -f . && git pull origin master' \
+ '&& yarn'\
+ '&& yarn prebuild'\
+ '&& yarn build'\
+ '&& pm2 restart server' \
+ '&& sudo systemctl restart nginx'
+
+echo "...SYNC "
+read message
+
