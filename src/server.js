@@ -1,3 +1,5 @@
+// eslint-disable-next-line semi
+
 import app from './app';
 
 const port = process.env.API_PORT;
