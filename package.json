@@ -7,8 +7,9 @@
   "scripts": {
     "dev": "nodemon src/server.js",
     "prebuild": "rimraf dist",
-    "build": "sucrase ./src -d ./dist --transforms imports",
-    "start": "node dist/server.js"
+    "build": "sucrase ./src -d ./dist --transforms imports copy:templates",
+    "start": "node dist/server.js",
+    "copy:templates": "mv './src/templates/**' 'dist/templates'"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",

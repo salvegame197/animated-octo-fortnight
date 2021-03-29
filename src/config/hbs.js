@@ -1,7 +1,7 @@
 import exphbs from 'express-handlebars';
 import path from 'path';
 
-const viewPath = path.resolve(__dirname, '..', 'views', 'email');
+const viewPath = path.resolve(__dirname, '../../', 'views', 'email');
 export default {
   viewEngine: exphbs.create({
     layoutsDir: viewPath,
