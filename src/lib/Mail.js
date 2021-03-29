@@ -6,6 +6,7 @@ import hbsConfig from '../config/hbs';
 class Mail {
   constructor() {
     const { host, port, secure, auth } = mailConfig;
+
     this.transporter = nodemailer.createTransport({
       host,
       port,

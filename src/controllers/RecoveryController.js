@@ -1,6 +1,6 @@
-import User from '../models/user';
 import crypto from 'crypto';
 import { addMinutes, isAfter } from 'date-fns';
+import User from '../models/user';
 import Mail from '../lib/Mail';
 import mailConfig from '../config/mail';
 

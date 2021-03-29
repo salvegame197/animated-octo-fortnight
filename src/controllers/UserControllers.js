@@ -6,6 +6,7 @@ class UserController {
 
     return res.json(users);
   }
+
   async show(req, res) {
     const user = await User.findById(req.user);
     if (!user) {
@@ -15,6 +16,7 @@ class UserController {
     console.info(`IP:${req.ip}  GET/users : ${user}`);
     return res.json({ user: user.show() });
   }
+
   async store(req, res) {
     try {
       const { name, email, password } = req.body;
@@ -38,9 +40,10 @@ class UserController {
       });
     } catch (error) {
       console.info(`IP:${req.ip} POST/users ${error}`);
-      res.status(400).json({ error: 'Failed on create user' });
+      return res.status(400).json({ error: 'Failed on create user' });
     }
   }
+
   async update(req, res) {
     try {
       const user = await User.findById(req.user);
@@ -67,7 +70,9 @@ class UserController {
       return res.json({
         user: user.show(),
       });
-    } catch (error) {}
+    } catch (error) {
+      return console.error(error);
+    }
   }
 
   async deleted(req, res) {

@@ -1,5 +1,5 @@
-import User from '../models/user';
 import { verify } from 'jsonwebtoken';
+import User from '../models/user';
 import jwt from '../config/jwt';
 
 export default async function (req, res, next) {

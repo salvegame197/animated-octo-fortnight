@@ -30,17 +30,15 @@ const UserSchema = new Schema(
   }
 );
 
-UserSchema.pre('save', async function () {
+UserSchema.pre('save', async () => {
   this.password = await bcryptjs.hash(this.password, 8);
 });
 
-UserSchema.methods.show = function () {
-  return {
-    _id: this._id,
-    name: this.name,
-    email: this.email,
-    deleted: this.deleted,
-  };
-};
+UserSchema.methods.show = () => ({
+  _id: this.id,
+  name: this.name,
+  email: this.email,
+  deleted: this.deleted,
+});
 
 export default model('User', UserSchema);

@@ -1,6 +1,6 @@
-import User from '../models/user';
 import bcryptjs from 'bcryptjs';
 import jwt from 'jsonwebtoken';
+import User from '../models/user';
 import jwtConfig from '../config/jwt';
 
 class AuthController {

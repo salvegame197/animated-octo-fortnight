@@ -17,7 +17,7 @@ class Database {
         if (err) {
           console.warn(`MongoDB not Connected: ${err}`);
         } else {
-          console.info(`MongoDB Connected`);
+          console.info('MongoDB Connected');
         }
       }
     );
